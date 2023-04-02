@@ -1,0 +1,47 @@
+What are all the types of pokemon that a pokemon can have?
++----------+
+| name     |
++----------+
+| Normal   |
+| Water    |
+| Grass    |
+| Rock     |
+| Fire     |
+| Ground   |
+| Poison   |
+| Bug      |
+| Electric |
+| Dragon   |
+| Steel    |
+| Dark     |
+| Fighting |
+| Psychic  |
+| Ghost    |
+| Fairy    |
+| Ice      |
+| Flying   |
++----------+
+What is the name of the pokemon with id 45?
++-------+
+| name  |
++-------+
+| Eevee |
++-------+
+How many pokemon are there?
++-------------+
+| COUNT(name) |
++-------------+
+|         656 |
++-------------+
+How many types are there?
++-------------+
+| COUNT(name) |
++-------------+
+|          18 |
++-------------+
+How many pokemon have a secondary type?
++-------------+
+| COUNT(name) |
++-------------+
+|         316 |
++-------------+
