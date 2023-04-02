@@ -1,4 +1,4 @@
-What are all the types of pokemon that a pokemon can have?
+# What are all the types of pokemon that a pokemon can have?
 
 SELECT * FROM types;
 
@@ -25,7 +25,7 @@ SELECT * FROM types;
 | Flying   |
 +----------+
 
-What is the name of the pokemon with id 45?
+# What is the name of the pokemon with id 45?
 
 SELECT name FROM pokemons WHERE id = 45;
 
@@ -35,7 +35,7 @@ SELECT name FROM pokemons WHERE id = 45;
 | Eevee |
 +-------+
 
-How many pokemon are there?
+# How many pokemon are there?
 
 SELECT COUNT(name) FROM pokemons;
 
@@ -55,7 +55,7 @@ SELECT COUNT(name) FROM types;
 |          18 |
 +-------------+
 
-How many pokemon have a secondary type?
+# How many pokemon have a secondary type?
 
 SELECT COUNT(name) FROM pokemons WHERE secondary_type IS NOT NULL;
 

@@ -1,4 +1,4 @@
-What is each pokemon's primary type?
+# What is each pokemon's primary type?
 
 SELECT pokemons.name, types.name FROM pokemons LEFT JOIN types ON pokemons.primary_type = types.id;
 
@@ -663,7 +663,7 @@ SELECT pokemons.name, types.name FROM pokemons LEFT JOIN types ON pokemons.prima
 | Spewpa      | Bug      |
 +-------------+----------+
 
-What is Rufflet's secondary type?
+# What is Rufflet's secondary type?
 
 SELECT pokemons.name, types.name FROM pokemons LEFT JOIN types ON pokemons.secondary_type = types.id WHERE pokemons.name = 'Rufflet';
 
@@ -673,7 +673,7 @@ SELECT pokemons.name, types.name FROM pokemons LEFT JOIN types ON pokemons.secon
 | Rufflet | Flying |
 +---------+--------+
 
-What are the names of the pokemon that belong to the trainer with trainerID 303?
+# What are the names of the pokemon that belong to the trainer with trainerID 303?
 
 SELECT pokemons.name, pokemon_trainer.trainerID FROM pokemons LEFT JOIN pokemon_trainer ON pokemons.id = pokemon_trainer.pokemon_id WHERE pokemon_trainer.trainerID = 303;
 
@@ -684,7 +684,7 @@ SELECT pokemons.name, pokemon_trainer.trainerID FROM pokemons LEFT JOIN pokemon_
 | Vileplume |       303 |
 +-----------+-----------+
 
-How many pokemon have a secondary type Poison
+# How many pokemon have a secondary type Poison
 
 SELECT COUNT(name) FROM pokemons WHERE secondary_type = '7';
 
@@ -694,7 +694,7 @@ SELECT COUNT(name) FROM pokemons WHERE secondary_type = '7';
 |          31 |
 +-------------+
 
-What are all the primary types and how many pokemon have that type?
+# What are all the primary types and how many pokemon have that type?
 
 SELECT COUNT(pokemons.primary_type), types.name FROM pokemons LEFT JOIN types ON pokemons.primary_type = types.id GROUP BY types.name;
 
@@ -721,7 +721,7 @@ SELECT COUNT(pokemons.primary_type), types.name FROM pokemons LEFT JOIN types ON
 |                            1 | Flying   |
 +------------------------------+----------+
 
-How many pokemon at level 100 does each trainer with at least one level 100 pokemon have? (Hint: your query should not display a trainer)
+# How many pokemon at level 100 does each trainer with at least one level 100 pokemon have? (Hint: your query should not display a trainer)
 
 SELECT pokemon_trainer.trainerID, COUNT(*) from pokemon_trainer WHERE pokelevel = 100 GROUP BY pokemon_trainer.trainerID;
 
@@ -924,7 +924,7 @@ SELECT pokemon_trainer.trainerID, COUNT(*) from pokemon_trainer WHERE pokelevel 
 |     11696 |        2 |
 +-----------+----------+
 
-How many pokemon only belong to one trainer and no other?
+# How many pokemon only belong to one trainer and no other?
 
 SELECT COUNT(pokemon_id) FROM (SELECT pokemon_id FROM pokemon_trainer GROUP BY pokemon_id HAVING COUNT(*)
 = 1) AS Unique;
