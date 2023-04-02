@@ -923,4 +923,14 @@ SELECT pokemon_trainer.trainerID, COUNT(*) from pokemon_trainer WHERE pokelevel 
 |     11602 |        2 |
 |     11696 |        2 |
 +-----------+----------+
+
 How many pokemon only belong to one trainer and no other?
+
+SELECT COUNT(pokemon_id) FROM (SELECT pokemon_id FROM pokemon_trainer GROUP BY pokemon_id HAVING COUNT(*)
+= 1) AS Unique;
+
++-------------------+
+| COUNT(pokemon_id) |
++-------------------+
+|                13 |
++-------------------+
